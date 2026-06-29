@@ -1,0 +1,30 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="KB_CommentToVS.1da00ac9-dc7a-4026-a7a5-d4c7b7df2f78" Version="2.2" Language="zh-CN" Publisher="看北" />
+    <DisplayName>KB注释工具</DisplayName>
+    <Description xml:space="preserve">自定义代码注释格式，可写入当前时间，支持多行内容配置、前缀配置、时间格式配置  </Description>
+    <GettingStartedGuide>工具栏内有菜单可进行设置</GettingStartedGuide>
+    <ReleaseNotes>VS 原生 .snippet 不支持动态变量，无法插入当前时间，故此开发注释工具拓展</ReleaseNotes>
+    <Icon>APP.ico</Icon>
+    <PreviewImage>APP.jpg</PreviewImage>
+  </Metadata>
+  <Installation>
+    <!-- VS 2015~2019 (32-bit) -->
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0, 17.0)">
+      <ProductArchitecture>x86</ProductArchitecture>
+    </InstallationTarget>
+    <!-- VS 2022+ (64-bit) -->
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, )">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[14.0, )" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="KB_CommentToVS.pkgdef" />
+  </Assets>
+</PackageManifest>
